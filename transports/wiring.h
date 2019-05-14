@@ -42,12 +42,12 @@ public:
     ios();
 
     // With custom SPI pins
-    //spi = new SPIClass(HSPI);
-    //spi->begin(14, 12, 13, 2);
+    spi = new SPIClass(HSPI);
+    spi->begin(14, 12, 13, 2);
     
     // With default SPI pins
-    spi = new SPIClass();
-    spi->begin();
+    //spi = new SPIClass();
+    //spi->begin();
     
 #if defined(TEENSYDUINO) || defined(ARDUINO_ARCH_STM32L4) || defined(ARDUINO_ARCH_STM32)
     spi->beginTransaction(SPISettings(3000000, MSBFIRST, SPI_MODE0));
