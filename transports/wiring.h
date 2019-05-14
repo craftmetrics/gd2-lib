@@ -1,16 +1,4 @@
-#ifndef CS
-#if defined(ESP8266)
-#define CS D8
-#elif  defined(ESP32)
-#define CS 12
-#elif defined(ARDUINO_ARCH_STM32)
-#define CS PB0
-#elif (BOARD == BOARD_SUNFLOWER)
-#define CS 6
-#else
-#define CS 8
-#endif
-#endif
+#define CS 2
 
 #if defined(ESP8266) || defined(ESP32)
 #define YIELD() yield()
